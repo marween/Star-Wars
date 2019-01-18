@@ -3,6 +3,9 @@
 -<head>
     <meta charset='utf-8'>
     <link rel='stylesheet' href='style.css'>
+
+    <head>  
+   
 </head>
 <body>
     <div id="star-wars">
@@ -51,9 +54,21 @@
             </p>
         </div>
     </div>
-    <audio autoplay>
-        <source src='musique.mp3'>
-        </source>
+
+    <audio autoplay src="musique.mp3">
+        <iframe src="musique.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+        </iframe>
     </audio>
+  
+
+    <script type="text/javascript">
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if(!isChrome){
+            $('#iframeAudio').remove()
+        }
+        else{
+            $('#playAudio').remove()
+        }
+    </script>
 </body>
 </html>
