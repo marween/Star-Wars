@@ -1,0 +1,58 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background: url('Fond-etoile.png');
+    background-size: cover%;
+    width:100%;
+    ;
+}
+
+#star-wars{
+    position:fixed;
+    width:100%;
+    height: 100%;
+    perspective:200px;
+
+
+}
+
+#star-wars div{
+    text-align: justify;
+    -webkit-animation: star-wars 20s linear infinite;
+    -moz-animation: star-wars 20s linear infinite;
+    -o-animation: star-wars 20s  linear infinite;
+    animation: star-wars 20s  linear infinite;
+    margin:20%;
+    transform-origin: 50% 100%;
+    overflow: hidden;
+
+}
+
+p,h2,h1{
+    color:yellow;
+}
+
+h2,h1{
+    text-align:center;
+}
+h2{
+    margin-bottom: 25px;
+}
+
+
+
+
+
+@keyframes star-wars{
+    0%{
+        transform:  rotateX(20deg) translate3d(0,500px,0px) scale3d(2,2,2);
+    }
+    
+    to{
+        transform: rotateX(20deg) translate3d(0,0,0px) scale3d(2,2,2);
+
+    }
+}
